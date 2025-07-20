@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume Report - SkillSynch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Analysis Report</h1>
+
+    <div class="card" id="resume-results">
+      <div class="card__body">
+
+        <h3>Similarity Score</h3>
+        <div class="score-display">
+          <div class="score-circle">
+            <span class="score-value" id="similarity-score">0</span>
+            <span class="score-label">% Match</span>
+          </div>
+        </div>
+
+        <!-- 🎯 Doughnut Chart -->
+        <div class="chart-container" style="max-width: 400px; margin: auto;">
+          <canvas id="match-chart"></canvas>
+        </div>
+
+        <!-- 📊 Bar Chart -->
+        <div class="chart-container mt-4" style="max-width: 500px; margin: auto;">
+          <canvas id="skill-bar-chart"></canvas>
+        </div>
+
+        <div class="skills-analysis">
+          <div class="skill-section">
+            <h4>Matched Skills</h4>
+            <div class="skills-list" id="matched-skills"></div>
+          </div>
+
+          <div class="skill-section">
+            <h4>Missing Skills</h4>
+            <div class="skills-list missing" id="missing-skills"></div>
+          </div>
+        </div>
+
+        <div class="improvement-section">
+          <h4>Improvement Suggestions</h4>
+          <ul id="improvement-suggestions"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ JavaScript to populate report -->
+  <script src="report.js"></script>
+</body>
+</html>
