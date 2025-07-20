@@ -66,111 +66,6 @@
 - **librosa**: Audio analysis (optional advanced features)
 - **Werkzeug**: Secure file handling
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.8 or higher
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Internet connection (for speech recognition)
-
-### Installation
-
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd Hackathon
-   ```
-
-2. **Set Up Backend**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   ```
-
-3. **Configure AI Features (Optional)**
-   ```bash
-   python config.py  # Run setup helper
-   ```
-   
-   For full AI capabilities:
-   - Get a free Gemini API key: https://makersuite.google.com/app/apikey
-   - Create a `.env` file in the backend folder:
-   ```
-   GEMINI_API_KEY=your_api_key_here
-   ```
-   
-   **Note**: SkillSync works perfectly without the API key in demo mode!
-
-4. **Start the Backend Server**
-   ```bash
-   python app.py
-   ```
-   The server will start on `http://127.0.0.1:5000`
-
-5. **Launch Frontend**
-   ```bash
-   cd ../SkillSync
-   # Open index.html in your browser or use a local server
-   python -m http.server 8000  # Optional: Use Python's built-in server
-   ```
-
-6. **Access the Application**
-   - Open your browser and navigate to the frontend
-   - Start analyzing resumes and interviews!
-
-## 📋 Usage Guide
-
-### **Resume Analysis**
-1. Navigate to the "Resume Analyzer" tab
-2. Upload your resume (PDF, DOC, or DOCX)
-3. Paste the job description you're targeting
-4. Select your experience level (Beginner/Intermediate/Advanced)
-5. Click "Analyze Resume"
-6. Review results, skills analysis, and course recommendations
-7. Download the detailed report
-
-### **Interview Analysis**
-1. Go to the "Interview Analysis" tab
-2. Upload an audio recording of your interview (.mp3, .wav, .m4a)
-3. Click "Analyze Interview"
-4. Review speech patterns, sentiment analysis, and feedback
-5. Download the comprehensive interview report
-
-### **Analytics Dashboard**
-1. Visit the "Results" tab to see your progress
-2. View performance metrics and trends
-3. Explore skill demand charts
-4. Track your improvement over time
-
-## 🎯 API Endpoints
-
-### **Resume Analysis**
-```
-POST /analyze-resume
-- resume: File (PDF/DOC/DOCX)
-- job_description: String
-- user_level: String (Beginner/Intermediate/Advanced)
-```
-
-### **Interview Analysis**
-```
-POST /analyze-interview
-- interview: Audio file (MP3/WAV/M4A)
-```
-
-### **Course Recommendations**
-```
-POST /get-courses
-- missing_skills: Array
-- matched_skills: Array
-- user_level: String
-```
-
-### **Analytics Data**
-```
-GET /get-analytics
-Returns: User progress, skill trends, performance metrics
-```
 
 ## 🔧 Configuration
 
@@ -180,12 +75,6 @@ The application uses Google's Speech Recognition API, which requires an internet
 - Implementing offline speech recognition alternatives
 - Adding API rate limiting and error handling
 
-### **Course Database Customization**
-Update `backend/course_utils.py` to:
-- Add new courses and providers
-- Modify learning paths
-- Update market data and salary information
-- Customize recommendation algorithms
 
 ## 📊 Project Structure
 
@@ -215,27 +104,6 @@ SkillSync implements a professional design system with:
 - **Accessibility**: Focus states, proper contrast, keyboard navigation
 - **Dark Mode**: Automatic system preference detection
 
-## 🔮 Future Enhancements
-
-### **Advanced Features**
-- **Database Integration**: PostgreSQL/MongoDB for persistent storage
-- **User Authentication**: Account management and personalized profiles
-- **AI Integration**: OpenAI GPT for enhanced feedback generation
-- **Real-time Collaboration**: Share analyses with mentors or colleagues
-- **Mobile App**: React Native or Flutter mobile application
-
-### **ML/AI Improvements**
-- **Advanced Speech Analysis**: Emotion detection, speaking pace analysis
-- **Computer Vision**: Video interview analysis (facial expressions, body language)
-- **Predictive Analytics**: Success probability scoring
-- **Custom Models**: Industry-specific skill assessment algorithms
-
-### **Platform Integrations**
-- **LinkedIn Integration**: Import profiles and connections
-- **GitHub Integration**: Analyze coding contributions
-- **Job Board APIs**: Real-time job matching
-- **Learning Platform APIs**: Direct course enrollment
-
 ## 📈 Performance Metrics
 
 The completed SkillSync platform includes:
@@ -250,26 +118,6 @@ The completed SkillSync platform includes:
 - ✅ **Responsive Design**: Mobile and desktop optimized
 - ✅ **Report Generation**: Downloadable analysis reports
 
-## 🤝 Contributing
-
-SkillSync is designed for extensibility and community contributions:
-
-1. **Fork the Repository**
-2. **Create Feature Branch**: `git checkout -b feature/amazing-feature`
-3. **Commit Changes**: `git commit -m 'Add amazing feature'`
-4. **Push to Branch**: `git push origin feature/amazing-feature`
-5. **Open Pull Request**
-
-### **Areas for Contribution**
-- Additional course providers and learning paths
-- Enhanced audio analysis algorithms
-- UI/UX improvements and accessibility features
-- Mobile application development
-- Integration with external APIs
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -279,14 +127,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Charts**: Powered by Chart.js
 - **Icon Assets**: Unicode emoji for universal compatibility
 
-## 📞 Support
-
-For questions, issues, or feature requests:
-- Create an issue in the repository
-- Contact the development team
-- Check the documentation and API reference
-
----
 
 **Built with ❤️ for the developer community**
 
